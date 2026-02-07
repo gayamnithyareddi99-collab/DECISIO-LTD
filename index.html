@@ -465,46 +465,75 @@ footer{
   background:#bdbdbd;
 }
 
-/* MOBILE – HOME / HERO */
+/* MOBILE – HOME / HERO (PRO / PREMIUM) */
 @media (max-width: 900px){
 
+  /* SECTION SPACING */
+  .home-section{
+    padding-top: 110px;
+    padding-bottom: 90px;
+  }
+
+  /* TITLE */
   .home-title{
     font-size: 28px;
-    line-height: 1.25;
+    line-height: 1.22;
     text-align: center;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
   }
 
+  /* SUBTITLE */
   .home-subtitle{
     font-size: 15px;
-    line-height: 1.7;
+    line-height: 1.75;
     text-align: center;
-    margin-bottom: 26px;
+    max-width: 320px;
+    margin: 0 auto 28px;
+    color: #555;
   }
 
+  /* ACTIONS */
   .home-actions{
+    display: flex;
     flex-direction: column;
     gap: 14px;
     align-items: center;
+    margin-bottom: 28px;
   }
 
   .home-actions a,
   .home-actions button{
     width: 100%;
-    max-width: 280px;
+    max-width: 300px;
     padding: 14px 0;
     font-size: 14px;
+    font-weight: 700;
     letter-spacing: 1px;
+    border-radius: 6px;
   }
 
+  /* HIGHLIGHTS */
   .home-highlights{
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 14px;
-    margin-top: 24px;
+    gap: 12px 18px;
+    margin-top: 10px;
   }
 
   .home-highlights span{
     font-size: 13px;
+    letter-spacing: 0.6px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background: #f2f2f2;
+  }
+
+  /* MICRO POLISH */
+  .home-actions a:active,
+  .home-actions button:active{
+    transform: scale(0.97);
   }
 
 }
