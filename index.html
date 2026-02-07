@@ -212,33 +212,38 @@ footer{
 
 /* MOBILE MENU */
 @media(max-width:900px){
-  .hero-circle{width:280px;height:280px;border-width:20px;}
-  .hero h1{font-size:30px;}
-  h3.section-title{font-size:26px;}
-  .section-box{padding:40px;}
+
+  .menu-toggle{
+    display:block;
+    font-size:26px;
+    cursor:pointer;
+    user-select:none;
+  }
 
   .nav-links{
-    position:absolute;
+    position:fixed;          /* 🔑 IMPORTANT */
     top:72px;
-    right:24px;
+    left:0;
+    right:0;
     background:var(--white);
-    border:3px solid var(--dark);
-    padding:18px 22px;
+    border-top:3px solid var(--dark);
+    border-bottom:3px solid var(--dark);
+    padding:28px 0;
     display:none;
     flex-direction:column;
-    gap:14px;
+    align-items:center;
+    gap:20px;
+    z-index:999;
   }
 
   .nav-links a{
     margin:0;
+    font-size:15px;
+    letter-spacing:1px;
   }
 
   .nav-links.show{
     display:flex;
-  }
-
-  .menu-toggle{
-    display:block;
   }
 }
 </style>
@@ -250,8 +255,8 @@ footer{
 <nav>
   <div class="logo">DECISIO LTD</div>
 
-  <!-- 🍺 MENU ICON -->
-  <div class="menu-toggle" onclick="toggleMenu()">🍺</div>
+  <!-- MOBILE MENU ICON -->
+  <div class="menu-toggle" onclick="toggleMenu()">🔊</div>
 
   <div class="nav-links" id="navMenu">
     <a href="#home" onclick="closeMenu()">HOME</a>
@@ -261,7 +266,6 @@ footer{
     <a href="#contact" onclick="closeMenu()">CONTACT</a>
   </div>
 </nav>
-
 <!-- HOME / HERO SECTION -->
 <section id="home" class="decisio-home">
 
@@ -478,6 +482,13 @@ footer{
 </style>
 
 <script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("show");
+}
+
+function closeMenu(){
+  document.getElementById("navMenu").classList.remove("show");
+}
 /* SOFT HERO REVEAL */
 const home = document.querySelector('.decisio-home');
 home.style.opacity = 0;
