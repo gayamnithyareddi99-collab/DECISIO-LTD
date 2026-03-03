@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Decisio Ltd</title>
-
+<link rel="icon" type="image/png" href="iname2.jpeg">
 <style>
 :root{
   --light:#f2f2f2;
@@ -51,9 +51,25 @@ footer
   z-index:9999;
 }
 
-/* LOGO */
-.logo img{
+/* BRAND (LOGO + NAME) */
+.company-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+/* LOGO IMAGE */
+.logo{
   height:40px;
+  width:auto;
+}
+
+/* COMPANY NAME */
+.company-name{
+  font-size:20px;
+  font-weight:700;
+  color:#0f0f0f;
+  letter-spacing:1px;
 }
 
 /* NAV LINKS DESKTOP */
@@ -107,18 +123,15 @@ footer
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
 
-  <!-- LOGO -->
-  <div class="logo">
-    <img src="iname2.jpeg" alt="Decisio Ltd Logo">
+  <div class="company-brand">
+    <img src="inage1.jpeg" alt="Company Logo" class="logo">
+    <span class="company-name">Decisio Ltd</span>
   </div>
 
-  <!-- MOBILE ICON -->
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-  <!-- MENU -->
   <div class="nav-links" id="navMenu">
     <a href="#home" onclick="closeMenu()">HOME</a>
     <a href="#about" onclick="closeMenu()">ABOUT</a>
@@ -429,7 +442,7 @@ obs.observe(home);
 
     <div class="dashboard-wrapper">
       <div class="dashboard-overlay"></div>
-      <img src="Dashboard.jpeg" alt="Dashboard Preview">
+      <img src="nn1.png" alt="Dashboard Preview">
     </div>
 
     <div class="preview-features">
@@ -731,19 +744,29 @@ window.addEventListener("scroll", ()=>{
 
       <div class="about-founder">
   <h4>Founder & Leadership</h4>
+
   <p>
     Decisio Ltd was founded and is led by <strong>Shubham Singh</strong>,
-    who brings over seven years of experience in operational engineering,
+    who holds an MSc from Queen Mary University of London (QMUL) and
+    brings extensive experience in operational engineering,
     applied analytics, and decision science within UK operational environments.
   </p>
 
-  <p>Connect on LinkedIn for professional background and thought leadership:</p>
+  <p>
+    His work focuses on integrating predictive analytics,
+    optimisation modelling, and governance frameworks into
+    real-world operational systems across the UK.
+  </p>
 
-<a href="https://uk.linkedin.com/in/shubhamsinghdatascience" 
-   target="_blank" 
-   class="linkedin-btn">
-   View LinkedIn
-</a>
+  <p>
+    Connect on LinkedIn for professional background and thought leadership:
+  </p>
+
+  <a href="https://uk.linkedin.com/in/shubhamsinghdatascience"
+     target="_blank"
+     class="linkedin-btn">
+     View LinkedIn
+  </a>
 </div>
 
   </div>
